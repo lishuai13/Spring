@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+    <bean id="daoImpl" class="dao.DaoImpl"/>
+
+    <bean id="serviceImpl" class="service.ServiceImpl">
+        <!--调用已经创建好的bean对象，即在ServiceImpl中创建DaoImpl对象-->
+        <property name="dao" ref="daoImpl"/>
+    </bean>
+
+</beans>

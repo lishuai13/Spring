@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="girlFriend" class="entity.GirlFriend">
+        <property name="name" value="李倩"/>
+        <property name="age" value="18"/>
+    </bean>
+
+    <bean id="user" class="entity.User">
+        <!--字符串注入-->
+        <property name="name" value="李帅"/>
+        <!--整型注入-->
+        <property name="age" value="20"/>
+        <!--对象注入-->
+        <property name="girlFriend" ref="girlFriend"/>
+        <!--数组注入-->
+        <property name="strings">
+            <array>
+                <value>红楼梦</value>
+                <value>三国演义</value>
+                <value>水浒传</value>
+                <value>西游记</value>
+            </array>
+        </property>
+        <!--List数组注入-->
+        <property name="list">
+            <list>
+                <value>雷霆嘎巴</value>
+                <value>欧青拉绍</value>
+                <value>八爷何来</value>
+            </list>
+        </property>
+        <!--Map数组注入-->
+        <property name="map">
+            <map>
+                <entry key="身份证号" value="11111111"/>
+                <entry key="学号" value="5601117056"/>
+            </map>
+        </property>
+        <!--Null值注入-->
+        <property name="wife">
+            <null/>
+        </property>
+        <!--布尔值注入-->
+        <property name="flag" value="true"/>
+        <!--配置文件注入-->
+        <property name="properties">
+            <props>
+                <prop key="driver">com.sun.org</prop>
+                <prop key="name">lishuai</prop>
+                <prop key="password">123456</prop>
+            </props>
+        </property>
+    </bean>
+</beans>

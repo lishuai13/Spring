@@ -1,0 +1,8 @@
+# Project exclude paths
+/Annotation-demo/target/
+/AOP-demo/target/
+/Autowired-demo/target/
+/Configuration-demo/target/
+/demo/target/
+/IOC-demo/target/
+/spring-demo/target/
